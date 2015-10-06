@@ -1,0 +1,256 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{amsmath}                		% See geometry.pdf to learn the layout options. There are lots.
+              		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or epsÂ§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+\usepackage{cancel}
+%SetFonts
+
+%SetFonts
+
+
+\title{First Latex Assignment}
+\author{Zachary Waterman}
+%\date{}							% Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+
+
+{Consider two rad cars racing around the inner lane of a circular racetrack. Each car is 2.0 meters wide and 5.0 meters long. They travel at a speed of 50 m/s in a circle of radius 40 meters, with the rear car 1.0 meters behind the rear bumper of the front car. The rear car can perform constant acceleration from 50 m/s to 60 m/s in two seconds stay at 60 m/s for 2 seconds and then return (at a constant rate) to 50 m/s over the next two seconds. Describe a possible passing maneuver in physical detail. Discuss the physical significance of each of the four acceleration terms from the polar coordinate representation. }
+
+
+
+\section{Explanation of Stage 1} 
+Before passing the leading rad car, the trailing rad car (the leading and trailing rad cars will be referred to as $R_{1}$ and $R_{2}$, respectively)  must accelerate into the outer lane. In order to avoid collision, the trailing rad car should shift to a concentric circle of a 43 meter radius, preserving a meter gap in the radial direction between the accelerating rad car and the first rad car. During its first two seconds of motion, $R_{2}$ will maintain a constant tangential velocity of $ 50 \frac{m}{s} $ and a constant radial velocity of $1.5 \frac{m}{s}$ .  
+
+
+
+\par 
+In order to determine the total acceleration of $R_{2}$ in its first two seconds of this passing maneuver, a number of additional variables must be determined. Among them are $\alpha$, $\omega$, r, $V_{rad}$, $a_{rad}$  and $V_{tan}$: 
+
+$$ V_{rad} = 1.5 \frac{m}{s} $$
+
+ $$ V_{tan} = 50 \frac{m}{s} $$
+
+$$a_{rad} = 0$$ 
+
+$$ r = 42 $$ 
+
+$$ \omega = \frac{\Delta \theta}{\Delta T} = \frac{2\pi (\frac{50}{2\pi(42)})}{1} = 1.19 \frac{rad}{sec}$$
+
+
+$$\alpha = 0$$
+
+After obtaining those values, finding total acceleration, when $R_{2}$ is racing around a circle with a 42 meter radius, is simply a matter of plugging these numbers into an equation: 
+
+$$ \vec{a} = \underbrace{r \alpha \hat{\theta}}_{tangential} - \overbrace{r \omega^{2} \hat{r}}^{centripetal} + \underbrace{2 V_{r}\omega \hat{\theta}}_{Coriolis} + \overbrace{a_{r}\hat{r}}^{radial} $$
+
+$$ \vec{a} = \cancel{42 (0) \hat{\theta} }- (43) (1.19)^{2} \hat{r} + (2)(1.5)(1.19)\hat{\theta} + \cancel{(o)\hat{r} }$$
+
+$$ \boxed{ \vec{a} = -60.9 \hat{r} + 3.57 \hat{\theta}} $$
+
+The cancelling of the tangential and radial acceleration terms indicates that $R_{2}$ is not accelerating radially or tangentially. The size of centripetal acceleration is a clear indicator that $R_{2}$ is being drawn strongly toward the center of the track. Additionally, the Coriolis acceleration is small but significant. 
+
+
+The difference in angular displacement between $R_{1}$ and $R_{2}$ ought to be calculated at this point as well. 
+
+$$ \Delta \theta = \bar{\omega}t $$
+
+$$ t = 2 sec $$
+
+$$ \bar{\omega}_{R_{2}} = \frac{\omega_{o} + \omega{f}}{2} =   \frac{2\pi    (\frac{50}{2\pi(43)})     +  2\pi (\frac{50}{2\pi(40)})}{2} = \frac{1.19 \frac{rad}{sec} + 1.25 \frac{rad}{sec}}{2} = 1.22 \frac{rad}{sec}$$
+
+$$ \Delta \theta_{R_{2}} = (1.22 \frac{rad}{sec}) \times (2 sec) = 2.44 rad $$ 
+
+$$ \Delta \theta_{R_{1}} = (1.25 \frac{rad}{sec}) \times (2 sec) = 2.5 rad $$ 
+
+$$ \Delta \theta_{R_{1} and R_{2}} = 2.44 rad - 2.5 rad = .06 rad $$ 
+
+$R_{1}$ is .06 radians ahead of $R_{2}$ at the end of the first two seconds of this maneuver. 
+
+
+
+
+\section{Explanation of Stage 2} 
+
+
+Given that the trailing rad car, referred to as $R_{2}$ from now on, has the capability to accelerate at a constant rate to $60 \frac{m}{s}$ while shifting to the outer lane, it would be expedient for $R_{2}$ to do so. 
+\par 
+In order to determine the total acceleration of $R_{2}$ in its second two seconds of this passing a maneuver, a number of variables must be determined. Among them are $\alpha$, $\omega_{o}$, $\omega_{f}$, r, $V_{rad}$, $a_{rad}$  and $V_{tan}$: 
+
+
+
+
+
+
+$$ r = 43 meters$$ 
+
+
+$$ V_{rad} = 0 $$
+
+$$ a_{rad} = 0 $$ 
+
+$$ V_{tan} = r \omega = (43)(1.4) = 60.2 \frac{m}{s}$$
+
+$$ \omega_{oR2} =  \frac{\Delta \theta}{\Delta T} = \frac{2\pi (\frac{50}{2\pi(43)})}{1} = 1.16\frac {rad}{sec} $$
+
+
+
+
+
+
+$$ \omega_{R2, t =2} =   \frac{\Delta \theta}{\Delta T} = \frac{2\pi (\frac{60}{2\pi(43)})}{1} = 1.4  \frac {rad}{sec} $$
+
+$$ \alpha_{R2} = \frac{1.4 \frac{rad}{s} - 1.16 \frac{rad}{s}}{2} = .015 \frac{rad}{s^{2}} = .24 \frac {rad}{sec^{2}} $$
+
+After obtaining those values, finding total acceleration, when $R_{2}$ is accelerating around a circle with a 43 meter radius, is simply a matter of plugging these numbers into an equation: 
+
+$$ \vec{a} = \underbrace{r \alpha \hat{\theta}}_{tangential} - \overbrace{r \omega^{2} \hat{r}}^{centripetal} + \underbrace{2 V_{r}\omega \hat{\theta}}_{Coriolis} + \overbrace{a_{r}\hat{r}}^{radial} $$
+
+$$ \vec{a} = (43) (.24) \hat{\theta} - (43)(1.4)^{2} \hat{r} + \cancel{2 (0)(1.4) \hat{\theta}} + \cancel{(0)\hat{r} }$$
+
+$$\boxed{ \vec{a} = 10.32 \hat{\theta} - 84.28 \hat{r} } $$
+
+
+It is not surprising that the magnitude of tangential acceleration increased from 3.57 to 10.32, because the speed of $R_{2}$ increased from $50 \frac{m}{s}$ to $60 \frac{m}{s}$. In addition, it is logical that centripetal acceleration would increase given that the radius of track has increased for $R_{2}$ as well. Lastly, there were no Coriolis or radial accelerations as radial velocity was equal to zero for the entire period. 
+
+
+
+
+The difference in angular displacement between $R_{1}$ and $R_{2}$ ought to be calculated at this point as well. 
+
+
+
+$$ \Delta \theta = \bar{\omega}t $$
+
+$$ t = 2 sec $$
+
+$$ \bar{\omega}_{R_{2}} = \frac{\omega_{o} + \omega{f}}{2} =   \frac{2\pi    (\frac{50}{2\pi(43)})     +  2\pi (\frac{60}{2\pi(43)})}{2} = \frac{1.19 \frac{rad}{sec} + 1.4 \frac{rad}{sec}}{2} = 1.295 \frac{rad}{sec}$$
+
+$$ \Delta \theta_{R_{2}} = (1.295 \frac{rad}{sec}) \times (2 sec) + 2.44 rad= 5.03 rad $$ 
+
+$$ \Delta \theta_{R_{1}} = (1.25 \frac{rad}{sec}) \times (2 sec) + 2.5 rad = 5 rad $$ 
+
+$$ \Delta \theta_{R_{1} and R_{2}} = 5.00 rad - 5.03 rad = -.03 rad $$ 
+
+$R_{1}$ is .03 radians behind $R_{2}$ at the end of the first four seconds of this maneuver. 
+
+
+
+\section{Explanation of Stage 3} 
+In this stage, $R_{2}$ has finished accelerating and should pass $R_{1}$ while staying in the outer lane. In order to do this, $R_1$ will maintain it's current speed of $60 \frac{m}{s} $ for the next period of two seconds. 
+
+\par
+
+As in the prior two stages, the values of a handful of values will need to be identified in order to determine the total acceleration of $R_{2}$ after six seconds have elapsed in total. Among these variables are: r, $\alpha$, $\omega$, $V_{r}$, and $a_{r}$.
+
+$$ r = 43 $$ 
+
+$$ \alpha = 0 $$
+
+$$ \omega =  \frac{\Delta \theta}{\Delta T} = \frac{2\pi (\frac{60}{2\pi(43)})}{1} = 1.4  \frac {rad}{sec} $$
+
+$$ V_{r} = 0$$ 
+
+$$a_{r} = 0 $$
+
+
+After obtaining those values, finding total acceleration, when $R_{2}$ is accelerating around a circle with a 43 meter radius, is simply a matter of plugging these numbers into an equation: 
+
+$$ \vec{a} = \underbrace{r \alpha \hat{\theta}}_{tangential} - \overbrace{r \omega^{2} \hat{r}}^{centripetal} + \underbrace{2 V_{r}\omega \hat{\theta}}_{Coriolis} + \overbrace{a_{r}\hat{r}}^{radial} $$
+
+$$ \vec{a} = \cancel{(43) (0) \hat{\theta}} - (43)(1.4)^{2} \hat{r} + \cancel{2 (0)(1.4) \hat{\theta}} + \cancel{(0)\hat{r}} $$
+
+
+$$\boxed{ \vec{a} = - 84.28 \hat{r} } $$
+
+As $R_{2}$ is maintaining a constant speed of $60 \frac{m}{s}$, its total acceleration is equal to its centripetal acceleration, which is slightly greater with a radius of 43 meters than it was it with a radius of 40 meters. 
+
+
+
+The difference in angular displacement between $R_{1}$ and $R_{2}$ ought to be calculated at this point as well. 
+
+
+$$ \Delta \theta = \bar{\omega}t $$
+
+
+
+$$ t = 2 sec $$
+
+$$ \bar{\omega}_{R_{2}} = \frac{\omega_{o} + \omega{f}}{2} =   \frac{2\pi    (\frac{60}{2\pi(43)})     +  2\pi (\frac{60}{2\pi(43)})}{2} = \frac{1.4 \frac{rad}{sec} + 1.4 \frac{rad}{sec}}{2} = 1.4 \frac{rad}{sec}$$
+
+$$ \Delta \theta_{R_{2}} = (1.4 \frac{rad}{sec}) \times (2 sec) + 5.03 rad= 7.83 rad $$ 
+
+$$ \Delta \theta_{R_{1}} = (1.25 \frac{rad}{sec}) \times (2 sec) + 5 rad = 7.5 rad $$ 
+
+$$ \Delta \theta_{R_{1} and R_{2}} = 7.5 rad - 7.83 rad = -.33 rad $$ 
+
+$R_{1}$ is .33 radians behind $R_{2}$ at the end of the first six seconds of this maneuver. 
+
+\section{Explanation of Stage 4} 
+
+In this stage, $R_{2}$ should decelerate to $50 \frac{m}{s}$ at a constant rate and maneuver back into the inner lane in front of $R_{1}$. At the end of this stage, the passing maneuver should be complete. In order to return to the inner lane, $R_{2}$ ought to have a radial velocity of $-1.5 \frac{m}{s}$ and a radial acceleration of 0. 
+\par
+
+As in the prior two stages, the values of a handful of values will need to be identified in order to determine the total acceleration of $R_{2}$ after six seconds have elapsed in total. Among these variables are: r, $\alpha$, $\omega$, $V_{r}$, and $a_{r}$.
+
+$$ r = 40 $$ 
+
+$$ \omega =  \frac{\Delta \theta}{\Delta T} = \frac{2\pi (\frac{50}{2\pi(40)})}{1} = 1.25  \frac {rad}{sec} $$
+
+$$ \alpha = \frac{1.25 \frac{rad}{s} - 1.4 \frac{rad}{s}}{2} = -.075 \frac{rad}{s^{2}}$$
+
+
+
+$$ V_{r} = -1.5 \frac{m}{s}$$ 
+
+$$a_{r} = 0 $$
+
+After obtaining those values, finding total acceleration, when $R_{2}$ is accelerating around a circle with a 43 meter radius, is simply a matter of plugging these numbers into an equation: 
+
+
+$$ \vec{a} = \underbrace{r \alpha \hat{\theta}}_{tangential} - \overbrace{r \omega^{2} \hat{r}}^{centripetal} + \underbrace{2 V_{r}\omega \hat{\theta}}_{Coriolis} + \overbrace{a_{r}\hat{r}}^{radial} $$
+
+$$ \vec{a} = (40) (-.075) \hat{\theta} - (40)(1.25)^{2} \hat{r} + 2 (1.5)(1.25) \hat{\theta} + \cancel{(0)\hat{r}} $$
+
+$$\boxed{ \vec{a} = .75 \hat{\theta} - 62.5 \hat{r} } $$
+
+
+Given that $R_{2}$ is decelerating, it makes sense that there would be a significant and negative tangential acceleration. This negative tangential acceleration combines with a slightly larger in magnitude Coriolis acceleration, which brings the total acceleration in the direction of $\hat{\theta}$ to $.75 \frac{m}{s^{2}}$. Centripetal acceleration will decrease to $62.5 \frac{m}{s^2}$ from $84.28 \frac{m}{s^{2}}$ in the previous stage, because radius has decreased from 43 meters to 40 meters. Finally, there will be no radial acceleration, as $R_{2}$ is not accelerating radially. 
+
+
+The difference in angular displacement between $R_{1}$ and $R_{2}$ ought to be calculated at this point as well. 
+
+
+
+$$ \Delta \theta = \bar{\omega}t $$
+
+
+$$ t = 2 sec $$
+
+$$ \bar{\omega}_{R_{2}} = \frac{\omega_{o} + \omega{f}}{2} =   \frac{2\pi    (\frac{60}{2\pi(43)})     +  2\pi (\frac{50}{2\pi(40)})}{2} = \frac{1.4 \frac{rad}{sec} + 1.25 \frac{rad}{sec}}{2} = 1.325 \frac{rad}{sec}$$
+
+$$ \Delta \theta_{R_{2}} = (1.325 \frac{rad}{sec}) \times (2 sec) + 7.83 rad= 10.48 rad $$ 
+
+$$ \Delta \theta_{R_{1}} = (1.25 \frac{rad}{sec}) \times (2 sec) + 7.5 rad = 10.0 rad $$ 
+
+$$ \Delta \theta_{R_{1} and R_{2}} = 10.00 rad - 10.48 rad = -.48 rad $$ 
+
+$R_{1}$ is .48 radians behind $R_{2}$ after the maneuver is complete. 
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}  
